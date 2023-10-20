@@ -5,15 +5,16 @@ def is_divisible(num1, num2):
     :param num2: The divisor
     :return: True if num1 is evenly divisible by num2, false otherwise
     """
-
-    pass
-
+    test = num1%num2
+    if test == 0:
+        return True
+    else:
+        return False
 
 def main():
-
     # Get the two pieces of input from the user.
-    num = int(input("What is the first number? "))
-    check = int(input("What is the second number? "))
+    num = int(input("What is the number you want to divide? "))
+    check = int(input("What is the number you want to divide it with? "))
 
     if is_divisible(num, check):
         print(num, "is divisible by", check)
