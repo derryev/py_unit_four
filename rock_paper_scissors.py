@@ -20,7 +20,7 @@ def who_wins(user, computer):
         return "You win!"
     elif  user==3 and computer==2:
         return "You win!"
-    elif float(user) == float(computer):
+    elif user == computer:
         return "Looks like it's a tie."
     else:
         return "The computer wins!"
@@ -28,8 +28,8 @@ def who_wins(user, computer):
 def main():
     print("Welcome to Rock, Paper, Scissors!")
     print("Rock, paper, scissors, shoot!")
-    user = input("Enter 1 to choose rock, 2 to choose paper, or 3 to choose scissors: ")
-    computer = random.randint(1,3)
+    user = float(input("Enter 1 to choose rock, 2 to choose paper, or 3 to choose scissors: "))
+    computer = float(random.randint(1,3))
     print(tell_user(computer))
     print(who_wins(user,computer))
 
